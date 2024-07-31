@@ -1,0 +1,372 @@
+body {
+   padding: 0;
+   margin: 0;
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+   background: #2b3034;
+   color: #cdd2d6;
+   overflow-y: scroll;
+   scrollbar-width: thin
+}
+
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+ 
+img, picture, video, canvas {
+   display: block;
+   max-width: 100%;
+}
+
+svg {
+   display: inline;
+   vertical-align: top;
+}
+
+input, button, textarea, select {
+   font: inherit;
+}
+
+::placeholder {
+   opacity: 75%;
+}
+
+.align-center {
+   text-align: center;
+}
+
+.flex-center {
+   align-items: center;
+   justify-content: center;
+}
+
+
+* {
+   margin: 0;
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+   font-variation-settings: "slnt" 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   color: #fff;
+}
+
+h1 {
+   font-size: 3rem;
+   line-height: 1.25em;
+}
+
+a {
+   display: inline;
+   text-decoration: none;
+   color: #cdd2d6;
+}
+
+a:hover {
+   text-decoration: none;
+   text-decoration-color: #fff;
+   color: #fff;
+}
+
+header.navbar {
+   display: flex;
+   position: sticky;
+   top: 0;
+   flex-direction: column;
+   align-items: center;
+   z-index: 999;
+}
+
+.navbar .part-top {
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   padding: 1rem 1.5rem;
+   flex-direction: row;
+   align-items: center;
+   gap: .75rem;
+   justify-content: space-between;
+   border-bottom: 1px solid #2b2d30;
+   background-color: #383e43;
+}
+.navbar .part-bottom {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   padding: .5rem 1.5rem;
+   background-color: #383e43;
+}
+
+.navbar .part-bottom table tr {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap: .5rem 1rem;
+}
+
+input {
+   width: 100%;
+   outline: none;
+   border:none;
+   padding: .75rem 1rem;
+   background: #212429;
+   color: #fff;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+   border-radius: .75rem;
+   border: 1px solid hwb(0 100% 0% / 0.25);
+}
+
+.search-bar {
+   max-width: 45%;
+   min-width: 40%;
+   display: flex;
+   border-radius: 99rem;
+   background: #212429;
+   overflow: hidden;
+   order: unset;
+}
+
+.search-bar input {
+   padding: .5rem 1rem;
+   border-radius: 99rem 0 0 99rem;
+}
+
+.search-bar button {
+   background-color: #ffffff;
+   padding: .5rem 1.25rem .5rem 1rem;
+   color: #0d6efd;
+   border-radius: unset;
+}
+
+.search-bar button:hover {
+   transform: none;
+}
+
+button {
+   width: fit-content;
+   padding: .75rem 1.5rem;
+   border: none;
+   background-color: transparent;
+   outline: none;
+   appearance: unset;
+   color: white;
+   background-color: #0d6efd;
+   border-radius: .75rem;
+   transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+   filter: brightness(1.125);
+   transform: scale(1.05);
+}
+
+.btn-row {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap:.5rem 1rem;
+}
+
+section {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1400px;
+   margin-top: 3rem;
+}
+
+main {
+   padding: 0 1.5rem;
+}
+
+.mt-1 {
+   margin-top: 1rem;
+}
+
+.mt-2 {
+   margin-top: 3rem;
+}
+
+.search-fine-user {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+}
+
+.search-fine-user > * {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   gap: .5rem;
+}
+
+.search-fine-user > :nth-child(2) {
+   flex-shrink: 3;
+}
+
+.fcolumn {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.subtle {
+   opacity: .65;
+}
+
+.dropdown-container {
+   margin: auto;
+	min-width: 300px;
+	overflow: hidden;
+   border-radius: .75rem;
+}
+
+.faq-block .dropdown-container {
+   border-radius: 0;
+   border-bottom: 1px solid hwb(0 100% 0% / 0.25);
+}
+
+.dropdown-container header {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+	cursor: pointer;
+   padding: 1rem 0 .75rem 0;
+}
+
+.dropdown-container header > * {
+   font-size: 1rem;
+   font-weight: 400;
+   color: white;
+}
+
+.dropdown-container .expand {
+	transform: rotate(180deg);
+	font-size: 1.8em;
+	transition: transform 200ms ease-in-out;
+}
+
+.dropdown-container.open .expand{
+	transform: rotate(0);
+}
+
+.dropdown-container article {
+	max-height: 0px;
+	overflow: hidden;
+	line-height: 1.6; 
+	transition: max-height 200ms ease-in-out;
+}
+
+.dropdown-container .article-inner {
+   padding-bottom: 1rem;
+}
+
+.stats {
+   position: relative;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 3rem 1rem;
+   border-radius: .75rem;
+   background: radial-gradient(163.43% 128.66% at 61.86% 2.94%, #0D6EFD 0%, #383E43 33.33%, #383E43 66.67%, #0D6EFD 100%);
+}
+
+.stats h3 {
+   font-size: 3rem;
+}
+
+.stats .fine-date {
+   position: absolute;
+   left: .75rem;
+   bottom: .75rem;
+}
+
+.storeLink {
+   position: relative;
+   display: inline-block;
+   width: 120px;
+   height: 40px;
+   overflow: hidden;
+}
+.storeLink > svg {
+   --width: 100% ;
+   position: absolute;
+   width: var(--width);
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+footer {
+   padding: 1.5rem;
+}
+
+footer a {
+   text-decoration: underline 1px solid;
+   text-decoration-color: #ffffff40;
+}
+
+footer a:hover {
+   text-decoration: underline 1px solid;
+}
+
+footer table {
+   width: 100%;
+}
+
+footer table tbody tr {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   justify-content: space-between;
+   flex-direction: row;
+}
+
+footer table td {
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   width: fit-content;
+}
+
+.app-download {
+   display: flex;
+   flex-direction: row;
+   gap: .5rem;
+}
+.socNetworks {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+}
+.socNetworks svg {
+   background-color: #fff;
+   color: #212429;
+   padding: .5rem;
+   border-radius: 99rem;
+}
+
+
+@media screen and (max-width: 600px) {
+   .navbar .part-top .search-bar {
+      order: 3;
+      max-width: unset;
+      width: 100%;
+   }
+
+   .search-fine-user label {
+      visibility: hidden;
+      display: none;
+   }
+}
